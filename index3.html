@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Digital | Syaiidina Purnama Sari</title>
+    <style>
+        :root {
+            --primary: #5c4d4d;      /* Cokelat gelap lembut untuk teks utama */
+            --accent: #ff9494;       /* Pink pastel ceria untuk aksen */
+            --accent-light: #fff0f0; /* Pink super muda untuk background mini */
+            --bg: #fffcf7;           /* Cream hangat untuk background utama */
+            --card-bg: #ffffff;
+            --text-muted: #8c7a7a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', 'Nunito', 'Segoe UI', sans-serif; /* Font membulat dan ramah */
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--primary);
+            line-height: 1.6;
+            padding: 50px 20px;
+        }
+
+        .portfolio-wrapper {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Header Gaya Cute & Clean */
+        header {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(229, 210, 197, 0.3);
+            border: 2px dashed #ffe3e3;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .contact-container {
+            background: var(--bg);
+            padding: 12px 20px;
+            border-radius: 12px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.9rem;
+        }
+
+        .contact-item {
+            color: var(--primary);
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+
+        /* Layout Utama */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1.8fr 1.2fr;
+            gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Kotak Konten (Cards) */
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(229, 210, 197, 0.2);
+            border: 1px solid #fcf6f0;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2::before {
+            content: '✨';
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: var(--primary);
+            text-align: justify;
+        }
+
+        /* Pengalaman Kerja / Timeline */
+        .timeline-item {
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px dashed #ffd1d1;
+            margin-bottom: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--primary);
+        }
+
+        .company-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+
+        .work-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 16px;
+        }
+
+        li {
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        /* Badges / Kapsul Keterampilan */
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .badge {
+            background: #fdf6f0;
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .badge.highlight {
+            background: var(--accent-light);
+            color: var(--accent);
+            border: 1px solid #ffe3e3;
+        }
+
+        .edu-block {
+            margin-bottom: 15px;
+        }
+
+        .edu-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary);
+        }
+
+        .edu-sub {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+<div class="portfolio-wrapper">
+
+    <!-- HEADER UTAMA -->
+    <header>
+        <h1>Syaiidina Purnama Sari</h1>
+        <div class="tagline">Mahasiswa Manajemen & Bisnis ✨ Eks-Hospitality Profesional</div>
+        
+        <div class="contact-container">
+            <div class="contact-item">📱 088223800073</div>
+            <div class="contact-item">✉️ <a href="mailto:syaiidinapurnama@gmail.com">syaiidinapurnama@gmail.com</a></div>
+            <div class="contact-item">📍 Jakarta Timur</div>[
+            <div class="contact-item">🔗 <a href="https://www.linkedin.com/in/syaiidina-purnama" target="_blank">LinkedIn</a></div>
+        </div>
+    </header>
+
+    <!-- LAYOUT KONTEN -->
+    <div class="main-layout">
+        
+        <!-- KOLOM KIRI -->
+        <div class="left-col">
+            <div class="card">
+                <h2>Tentang Aku</h2>
+                <p>
+                    Halo! Aku adalah mahasiswa aktif program studi Manajemen dan Bisnis di Universitas Mitra Bangsa dengan latar belakang pendidikan vokasi Perhotelan dari SMKN 24 Jakarta Memiliki fondasi yang kuat dalam operasional hotel, manajemen pelayanan (guest services), serta komunikasi bisnis. Dikenal sebagai pribadi yang ceria, penuh semangat, bertanggung jawab, dan mudah beradaptasi di lingkungan baru. Aku siap membawa energi positif dan perspektif manajemen yang segar ke dunia profesional!
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Pengalaman Seru</h2>
+                
+                <div class="timeline-item">
+                    <div class="job-title">Housekeeping Trainee</div>
+                    <div class="company-name">The Ritz-Carlton Mega Kuningan</div>
+                    <div class="work-date">Juli 2024 - Januari 2025</div>
+                    <ul>
+                        <li>Mengelola pencatatan serta administrasi pakaian tamu dengan teliti sesuai standar hotel bintang lima.</li>
+                        <li>Melakukan penataan, pencucian, dan perawatan pakaian kerja karyawan secara rapi dan teratur.</li>
+                        <li>Memastikan kebersihan dan keindahan area publik utama seperti lobi, koridor, dan ruang publik lainnya agar selalu nyaman bagi pengunjung.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- KOLOM KANAN -->
+        <div class="right-col">
+            <div class="card">
+                <h2>Pendidikan</h2>
+                
+                <div class="edu-block">
+                    <div class="edu-title">Universitas Mitra Bangsa</div>
+                    <div class="edu-sub">S1 Manajemen dan Bisnis (Aktif)</div>
+                </div>
+                
+                <div class="edu-block">
+                    <div class="edu-title">SMKN 24 Jakarta</div>
+                    <div class="edu-sub">Jurusan Perhotelan (2022 - 2025)</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Penghargaan</h2>
+                <div class="badge-container">
+                    <div class="badge highlight">🌸 MARRIOTTERSHIP - Housekeeping</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Keahlian & Bahasa</h2>
+                <div style="margin-bottom: 15px;">
+                    <div style="font-size: 0.8rem; font-weight: 700; margin-bottom: 8px; color: var(--text-muted); letter-spacing: 0.5px;">SKILLS</div>
+                    <div class="badge-container">
+                        <div class="badge">Hotel Operations</div>
+                        <div class="badge">Guest Services</div>
+                        <div class="badge">Public Area</div>
+                        <div class="badge">Adaptasi Cepat</div>
+                        <div class="badge">Teamwork</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div style="font-size: 0.8rem; font-weight: 700; margin-bottom: 8px; color: var(--text-muted); letter-spacing: 0.5px;">BAHASA</div>
+                    <div class="badge-container">
+                        <div class="badge">Indonesia</div>
+                        <div class="badge">Inggris</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
